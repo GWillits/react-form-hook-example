@@ -1,0 +1,39 @@
+{
+    "contact": {
+        "formname": "contact",
+        "fields": [
+            {
+                "fieldName": "firstname",
+                "inputType": "text",
+                "label": "First Name",
+                "yup": {
+                    "type": "string",
+                    "required": true,
+                    "checks": [
+                        {
+                            "key": "minLength",
+                            "val": 4,
+                            "err": "You must provide a first name with a length > 4"
+                        }
+                    ]
+                }
+            },
+             {
+                "fieldName": "email",
+                "inputType": "text",
+                "label": "Email",
+                "yup": {
+                    "type": "string",
+                    "required": true,
+                    "checks": [
+                        {
+                            "key": "email",
+                            "val": true,
+                            "err": "This is not a valid email"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
